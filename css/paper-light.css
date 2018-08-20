@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|EB+Garamond:400,400i,600i,600|Cutive+Mono');
+
+/* General */
+::selection {
+	background: #ccc;
+}
+::-moz-selection {
+	background: #ccc;
+}
+* {
+	font-family: 'EB Garamond', serif;
+	font-size: 1.2vw;
+	text-align: justify;
+	color: #111;
+	background-color: #fefefe;
+	position: relative;
+	transition: all 0.2s ease-out;
+}
+body {
+	margin: 10vh 30%;
+}
+body.lean-left {
+	margin: 10vh 40% 10vh 20%;
+}
+body.lean-right {
+	margin: 10vh 20% 10vh 40%;
+}
+
+.justify {
+	text-align: justify;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+
+/* Headers */
+h1 {
+	font-family: 'Cinzel', serif;
+	font-size: 250%;
+	font-weight: 400;
+	text-align: center;
+	margin: 1em 0;
+}
+h2 {
+	font-size: 208%;
+	font-weight: 400;
+	margin: 1em 0 0.5em 0;
+}
+h3 {
+	font-size: 167%;
+	margin: 1.1em 0 0.6em 0;
+}
+h4 {
+	font-size: 150%;
+	margin: 1.2em 0 0.65em 0;
+}
+h5 {
+	font-size: 125%;
+	margin: 1.5em 0 0.8em 0;
+}
+h6 {
+	margin: 2em 0 1em 0;
+}
+
+/* Paragraphs */
+p {
+	text-indent: 0;
+	margin: 0.5em 0 0 0;
+}
+p.indent {
+	text-indent: 1em;
+	margin: 0.15em 0 0 0;
+}
+
+/* Cite */
+cite {
+	font-style: italic;
+}
+
+/* Quote blocks */
+blockquote, blockquote * {
+	font-weight: 600;
+	font-style: italic;
+	color: #555;
+}
+blockquote {
+	font-weight: 600;
+	text-align: justify;
+	display: block;
+	margin: 3em 1em 3em 4em;
+}
+blockquote:before {
+	content: "\"";
+	font-size: 333%;
+	position: absolute;
+	left: -0.65em;
+	top: -0.5em;
+}
+blockquote>span.ref {
+	font-weight: 600;
+	font-style: normal;
+	text-align: right;
+	display: block;
+	margin: 1em 0.5em;
+}
+blockquote cite {
+	text-decoration: underline;
+}
+
+/* Code blocks */
+code {
+	font-family: 'Cutive Mono', monospace;
+	text-align: left;
+	white-space: pre-wrap;
+	border-left: #bbb 0.3em solid;
+	display: block;
+	margin: 3em 1em;
+	padding: 0.5em 0 0.5em 2em;
+}
+code:hover {
+	border-left-color: #777;
+}
+
+/* Links */
+a {
+	color: #2f4a66;
+}
+a:hover {
+	color: #355299;
+}
+
+/* Lists */
+ul, ol{
+	margin: 1em 0;
+	padding: 0 0 0 2.5em;
+}
+dl {
+	margin: 1em 0;
+}
+ul {
+	list-style-type: none;
+}
+ol, ol.decimal {
+	list-style-type: decimal;
+}
+ol.lower-roman {
+	list-style-type: lower-roman;
+}
+ol.upper-roman {
+	list-style-type: upper-roman;
+}
+ol.lower-latin {
+	list-style-type: lower-latin;
+}
+ol.upper-latin {
+	list-style-type: upper-latin;
+}
+li {
+	padding: 0 0 0 1em;
+}
+ul>li:before {
+	content: "\00bb";
+	position: absolute;
+	left: -1em;
+}
+dt {
+	font-style: italic;
+	font-weight: 600;
+	margin: 1em 0 0 0;
+}
+dd {
+	font-size: 90%;
+	color: #555;
+	margin: 0.5em 0 0 1em;
+}
+
+/* Horizontal line */
+hr {
+	border: #aaa 0.5px solid;
+	margin: 2em 5em;
+}
+
+/* Images */
+img {
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	display: block;
+	margin: 2em;
+}
+img.center {
+	margin: 2em auto;
+}
