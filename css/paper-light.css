@@ -9,12 +9,17 @@
 }
 * {
 	font-family: 'EB Garamond', serif;
-	font-size: 1.2vw;
+	font-size: 1.45em;
+	/font-size: 113%;
+	/font-size: 1.2vw;
 	text-align: justify;
 	color: #111;
 	background-color: #fefefe;
 	position: relative;
 	transition: all 0.2s ease-out;
+}
+* * {
+	font-size: 100%;
 }
 body {
 	margin: 10vh 30%;
@@ -24,6 +29,16 @@ body.lean-left {
 }
 body.lean-right {
 	margin: 10vh 20% 10vh 40%;
+}
+/* Body justification override if requested */
+body.justify * {
+	text-align: justify !important;
+}
+body.left  *{
+	text-align: left !important;
+}
+body.right * {
+	text-align: right !important;
 }
 
 .justify {
@@ -39,7 +54,7 @@ body.lean-right {
 /* Headers */
 h1 {
 	font-family: 'Cinzel', serif;
-	font-size: 250%;
+	font-size: 280%;
 	font-weight: 400;
 	text-align: center;
 	margin: 1em 0;
@@ -111,7 +126,7 @@ blockquote cite {
 }
 
 /* Code blocks */
-code {
+code, sample {
 	font-family: 'Cutive Mono', monospace;
 	text-align: left;
 	white-space: pre-wrap;
@@ -120,8 +135,26 @@ code {
 	margin: 3em 1em;
 	padding: 0.5em 0 0.5em 2em;
 }
-code:hover {
+code:hover, sample:hover {
 	border-left-color: #777;
+}
+kbd {
+	font-family: 'Cutive Mono', monospace;
+}
+
+/* Addresses */
+address {
+	font-size: 85%;
+	border-left: #bbb 0.3em solid;
+	display: block;
+	margin: 1em;
+	padding: 0.2em 0 0.2em 2em;
+}
+
+/* Abbreviations */
+abbr {
+	font-style: italic;
+	text-decoration: underline solid #777;
 }
 
 /* Links */
@@ -177,6 +210,16 @@ dd {
 	margin: 0.5em 0 0 1em;
 }
 
+/* Sub, sup */
+sub, sup {
+	font-size: 80%;
+}
+
+/* Highlighting */
+mark {
+	background-color: #ffe280;
+}
+
 /* Horizontal line */
 hr {
 	border: #aaa 0.5px solid;
@@ -193,4 +236,8 @@ img {
 }
 img.center {
 	margin: 2em auto;
+}
+img + span.caption {
+	font-style: italic;
+	font-size: 90%;
 }
