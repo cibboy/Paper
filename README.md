@@ -6,4 +6,4 @@ Work in progress.
 Missing in baseline:
 - Proper image caption
 - Tables
-- Responsiveness
+- Responsiveness (some tweaks)
