@@ -1,17 +1,66 @@
+/* -- Scss definitions -- */
+/* Light */
+$background-color: #fefefe;
+
+$main-color: #111;
+$alternative-color: #555;
+$selection-color: #ccc;
+
+$code-color: #bbb;
+$code-color-hover: #777;
+
+$link-color: #2f4a66;
+$link-color-hover: #355299;
+
+$highlight-color: #ffe280;
+
+$table-border-color: #ccc;
+$table-alternate-color: #f7f7f7;
+$table-header-color: #f0f0f0;
+
+$shadow-color: rgba(0, 0, 0, 0.2);
+
+/* Dark */
+/*$background-color: #252525;
+
+$main-color: #ccc;
+$alternative-color: #999;
+$selection-color: #ccc;
+
+$code-color: #777;
+$code-color-hover: #bbb;
+
+$link-color: #7397bb;
+$link-color-hover: #3e6994;
+
+$highlight-color: #70674c;
+
+$table-border-color: #ccc;
+$table-alternate-color: #303030;
+$table-header-color: #1c1c1c;*/
+
+$shadow-color: rgba(255, 255, 255, 0.2);
+
+@mixin caption() {
+	font-style: italic;
+	font-size: 85%;
+}
+
+/* -- Css -- */
 @import url('https://fonts.googleapis.com/css?family=Cinzel|EB+Garamond:400,400i,600i,600|Cutive+Mono');
 
 /* General */
 ::selection {
-	background: #ccc;
+	background: $selection-color;
 }
 ::-moz-selection {
-	background: #ccc;
+	background: $selection-color;
 }
 * {
 	font-family: 'EB Garamond', serif;
 	font-size: 1.45em;
-	color: #111;
-	background-color: #fefefe;
+	color: $main-color;
+	background-color: $background-color;
 	position: relative;
 	transition: all 0.2s ease-out;
 }
@@ -20,24 +69,32 @@
 }
 
 .justify, .justify *,
-.left .justify, .left .justify *
-.right .justify, .right .justify * {
+.left .justify, .left .justify *,
+.right .justify, .right .justify *,
+.center .justify, .center .justify * {
 	text-align: justify;
 }
 .left, .left *,
-.justify .left, .justify .left *
-.right .left, .right .left * {
+.justify .left, .justify .left *,
+.right .left, .right .left *,
+.center .left, .center .left * {
 	text-align: left;
 }
 .right, .right *,
-.justify .right, .justify .right *
-.left .right, .left .right *{
+.justify .right, .justify .right *,
+.left .right, .left .right *,
+.center .right, .center .right * {
 	text-align: right;
+}
+.center, .center *,
+.justify .center, .justify .center *,
+.left .center, .left .center *,
+.right .center, .right .center * {
+	text-align: center;
 }
 
 .caption {
-	font-style: italic;
-	font-size: 85%;
+	@include caption();
 }
 
 /* Headers */
@@ -90,7 +147,7 @@ cite {
 blockquote, blockquote * {
 	font-weight: 600;
 	font-style: italic;
-	color: #555;
+	color: $alternative-color;
 }
 blockquote {
 	font-weight: 600;
@@ -121,13 +178,13 @@ code, sample {
 	font-family: 'Cutive Mono', monospace;
 	text-align: left;
 	white-space: pre-wrap;
-	border-left: #bbb 0.3em solid;
+	border-left: $code-color 0.3em solid;
 	display: block;
 	margin: 3em 1em;
 	padding: 0.5em 0 0.5em 2em;
 }
 code:hover, sample:hover {
-	border-left-color: #777;
+	border-left-color: $code-color-hover;
 }
 kbd {
 	font-family: 'Cutive Mono', monospace;
@@ -136,7 +193,7 @@ kbd {
 /* Addresses */
 address {
 	font-size: 85%;
-	border-left: #bbb 0.3em solid;
+	border-left: $code-color 0.3em solid;
 	display: block;
 	margin: 1em;
 	padding: 0.2em 0 0.2em 2em;
@@ -145,19 +202,19 @@ address {
 /* Abbreviations */
 abbr {
 	font-style: italic;
-	text-decoration: underline solid #777;
+	text-decoration: underline solid $code-color-hover;
 }
 
 /* Links */
 a {
-	color: #2f4a66;
+	color: $link-color;
 }
 a:hover {
-	color: #355299;
+	color: $link-color-hover;
 }
 
 /* Lists */
-ul, ol{
+ul, ol {
 	margin: 1em 0;
 	padding: 0 0 0 2.5em;
 }
@@ -197,7 +254,7 @@ dt {
 }
 dd {
 	font-size: 90%;
-	color: #555;
+	color: $alternative-color;
 	margin: 0.5em 0 0 1em;
 }
 
@@ -208,13 +265,13 @@ sub, sup {
 
 /* Highlighting */
 mark {
-	background-color: #ffe280;
+	background-color: $highlight-color;
 }
 
 /* Horizontal line */
 hr {
 	border: none;
-	border-top: #aaa 1px solid;
+	border-top: $alternative-color 1px solid;
 	margin: 2em 5em;
 }
 
@@ -224,19 +281,47 @@ img {
 	margin: 2em;
 	max-width: 100%;
 }
-img.center {
+img.centered {
 	margin: 2em auto;
 }
 img.inline {
 	display: inline-block;
 }
 img.shadowed {
-	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 0 15px $shadow-color;
+	-moz-box-shadow: 0 0 15px $shadow-color;
+	box-shadow: 0 0 15px $shadow-color;
 }
 img.captioned {
 	margin-bottom: 0.5em;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	margin: 2em;
+	margin-bottom: 3em;
+}
+table.centered {
+	margin: 2em auto;
+	margin-bottom: 3em;
+}
+td, th {
+	border: 1px solid #ccc;
+	padding: 0.5em;
+	vertical-align: middle;
+}
+tbody>tr:nth-child(2n)>td {
+	background-color: $table-alternate-color;
+}
+th, tfoot>tr>td {
+	background-color: $table-header-color;
+}
+caption {
+	@include caption();
+	position: absolute;
+	bottom: -2em;
 }
 
 
