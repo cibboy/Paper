@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="../css/paper.css">
+		<link rel="stylesheet" type="text/css" href="../docs/paper-light.css">
 	</head>
 	
 	<body class="justify">
@@ -83,8 +83,10 @@ $res | Out-File -FilePath $OutputFile</code>
 			<a href="#">Link</a>
 		</p>
 		<p>
-			<img class="centered shadowed captioned" src="https://via.placeholder.com/350x150" />
-			<span class="caption">Image caption</span>
+			<figure class="centered">
+				<img class="shadowed captioned" src="https://via.placeholder.com/350x150" />
+				<figcaption>Image caption</figcaption>
+			</figure>
 		</p>
 		<p>
 			<img src="https://via.placeholder.com/350x150" />
@@ -95,7 +97,13 @@ $res | Out-File -FilePath $OutputFile</code>
 		<p>
 			<ul>
 				<li>Unordered list item 1</li>
-				<li>Unordered list item 2</li>
+				<li>Unordered list item 2
+					<ul>
+						<li>Unordered list item 1</li>
+						<li>Unordered list item 2</li>
+						<li>Unordered list item 3</li>
+					</ul>
+				</li>
 				<li>Unordered list item 3</li>
 			</ul>
 		</p>

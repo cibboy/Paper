@@ -6,8 +6,8 @@ $main-color: #111;
 $alternative-color: #555;
 $selection-color: #ccc;
 
-$code-color: #bbb;
-$code-color-hover: #777;
+$block-color: #bbb;
+$block-color-hover: #777;
 
 $link-color: #2f4a66;
 $link-color-hover: #355299;
@@ -27,8 +27,8 @@ $main-color: #ccc;
 $alternative-color: #999;
 $selection-color: #ccc;
 
-$code-color: #777;
-$code-color-hover: #bbb;
+$block-color: #777;
+$block-color-hover: #bbb;
 
 $link-color: #7397bb;
 $link-color-hover: #3e6994;
@@ -37,9 +37,9 @@ $highlight-color: #70674c;
 
 $table-border-color: #ccc;
 $table-alternate-color: #303030;
-$table-header-color: #1c1c1c;*/
+$table-header-color: #1c1c1c;
 
-$shadow-color: rgba(255, 255, 255, 0.2);
+$shadow-color: rgba(255, 255, 255, 0.2);*/
 
 @mixin caption() {
 	font-style: italic;
@@ -91,6 +91,11 @@ $shadow-color: rgba(255, 255, 255, 0.2);
 .left .center, .left .center *,
 .right .center, .right .center * {
 	text-align: center;
+}
+
+.centered {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .caption {
@@ -156,7 +161,7 @@ blockquote {
 	margin: 3em 1em 3em 4em;
 }
 blockquote::before {
-	content: "\"";
+	content: '"';
 	font-size: 333%;
 	position: absolute;
 	left: -0.65em;
@@ -178,13 +183,13 @@ code, sample {
 	font-family: 'Cutive Mono', monospace;
 	text-align: left;
 	white-space: pre-wrap;
-	border-left: $code-color 0.3em solid;
+	border-left: $block-color 0.3em solid;
 	display: block;
 	margin: 3em 1em;
 	padding: 0.5em 0 0.5em 2em;
 }
 code:hover, sample:hover {
-	border-left-color: $code-color-hover;
+	border-left-color: $block-color-hover;
 }
 kbd {
 	font-family: 'Cutive Mono', monospace;
@@ -193,7 +198,7 @@ kbd {
 /* Addresses */
 address {
 	font-size: 85%;
-	border-left: $code-color 0.3em solid;
+	border-left: $block-color 0.3em solid;
 	display: block;
 	margin: 1em;
 	padding: 0.2em 0 0.2em 2em;
@@ -202,7 +207,7 @@ address {
 /* Abbreviations */
 abbr {
 	font-style: italic;
-	text-decoration: underline solid $code-color-hover;
+	text-decoration: underline solid $block-color-hover;
 }
 
 /* Links */
@@ -217,6 +222,9 @@ a:hover {
 ul, ol {
 	margin: 1em 0;
 	padding: 0 0 0 2.5em;
+}
+ul ul, ul ol, ol ol, ol ul {
+	margin: 0.5em 0;
 }
 dl {
 	margin: 1em 0;
@@ -243,7 +251,7 @@ li {
 	padding: 0 0 0 1em;
 }
 ul>li::before {
-	content: "\00bb";
+	content: '\00bb';
 	position: absolute;
 	left: -1em;
 }
@@ -271,7 +279,7 @@ mark {
 /* Horizontal line */
 hr {
 	border: none;
-	border-top: $alternative-color 1px solid;
+	border-top: $block-color 1px solid;
 	margin: 2em 5em;
 }
 
@@ -280,9 +288,6 @@ img {
 	display: block;
 	margin: 2em;
 	max-width: 100%;
-}
-img.centered {
-	margin: 2em auto;
 }
 img.inline {
 	display: inline-block;
@@ -295,17 +300,20 @@ img.shadowed {
 img.captioned {
 	margin-bottom: 0.5em;
 }
+figure {
+	margin: 0;
+	display: table;
+}
+figcaption {
+	@include caption()
+	margin: 0 2.5em 1em 2.5em;
+}
 
 /* Tables */
 table {
 	border-collapse: collapse;
 	border: 1px solid #ccc;
-	margin: 2em;
-	margin-bottom: 3em;
-}
-table.centered {
-	margin: 2em auto;
-	margin-bottom: 3em;
+	margin: 2em 2em 3em 2em;
 }
 td, th {
 	border: 1px solid #ccc;
