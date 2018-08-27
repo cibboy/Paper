@@ -1,0 +1,29 @@
+nav {
+	position: fixed;
+	top: -100vh;
+	left: 0;
+	right: 0;
+	padding: 2em 20%; /* TODO: responsiveness */
+	height: calc(100vh - 4em);
+	opacity: 0.5;
+	z-index: 100;
+	transition: all 0.5s ease-in;
+}
+nav.active {
+	top: 0;
+	opacity: 1;
+	transition: all 0.5s ease-out;
+}
+
+#menu-toggle {
+	font-size: 200%;
+	padding: 1em;
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 101;
+}
+#menu-toggle.active {
+	transform: rotate(-180deg);
+}
