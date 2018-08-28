@@ -1,36 +1,54 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="paper-light.css">
+		<link rel="stylesheet" type="text/css" href="paper-light.css" id="base-css">
 		<link rel="stylesheet" type="text/css" href="paper-demo.css">
 		<link rel="stylesheet" type="text/css" href="fontello.css">
 	</head>
 	
-	<body class="justify">
+	<body class="justify" id="body">
 		<span id="menu-toggle" class="icon-angle-down" onclick="toggleMenu();"></span>
 		<nav id="menu">
 			<h1>Menu</h1>
-			<div>
-				<h3>Style</h3>
-				<ul>
-					<li>Menu item 1</li>
-					<li>Menu item 2</li>
-					<li>Menu item 3</li>
-				</ul>
-			</div>
-			<div>
-				<h3>Components</h3>
-				<ul>
-					<li>Menu item 1</li>
-					<li>Menu item 2</li>
-					<li>Menu item 3</li>
-				</ul>
-				<ul>
-					<li>Menu item 1</li>
-					<li>Menu item 2</li>
-					<li>Menu item 3</li>
-				</ul>
-			</div>
+			<section>
+				<div class="center">
+					<h3>Style</h3>
+					<p>
+						<h6>Color scheme</h6>
+						<a onclick="changeTheme('light');">Light</a> - 
+						<a onclick="changeTheme('dark');">Dark</a>
+					</p>
+					<p>
+						<h6>Body lean</h6>
+						<a onclick="bodyLean('left');">Lean left</a> - 
+						<a onclick="bodyLean('center');">Center</a> - 
+						<a onclick="bodyLean('right');">Lean right</a>
+					</p>
+					<p>
+						<h6>Global justification</h6>
+						<a onclick="justify('left');">Left</a> - 
+						<a onclick="justify('center');">Center</a> - 
+						<a onclick="justify('right');">Right</a> - 
+						<a onclick="justify('justify');">Justified</a>
+					</p>
+				</div>
+				<div class="center">
+					<h3>Components</h3>
+					<p><a href="#">Headers</a></p>
+					<p><a href="#">Paragraphs</a></p>
+					<p><a href="#">Lists</a></p>
+					<p><a href="#">Tables</a></p>
+					<p><a href="#">Quotes</a></p>
+					<p><a href="#">Code</a></p>
+					<p><a href="#">Links</a></p>
+					<p><a href="#">Pictures</a></p>
+					<p><a href="#">Other elements</a></p>
+				</div>
+				<div class="center">
+					<h3>Pages</h3>
+					<p><a href="#">Home</a></p>
+				</div>
+			</section>
 		</nav>
 
 		<h1>Paper</h1>
