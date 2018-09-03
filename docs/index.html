@@ -61,7 +61,17 @@
 		
 		<script type="text/html" id="home">
 			<h1>Paper</h1>
+			<h2>Introduction</h2>
 			<p>Welcome to Paper, a lightweight, typography-based, print-inspired, minimalistic design for websites.</p>
+			<p>Paper is a minimalistic styling css for websites looking for a print-like approach. Everything is designed to take advantage of the simple, traditional text-based html tags, using typography and whitespace to build sections. It based on very light sass in order to enable color variations.</p>
+			<p>Paper is not made to use advanced scripting languages to create new elements, fancy animations or extravagant styles. Aiming for paper quality, it focuses on text, typography and whitespace. All of this is already present in the very basic html tags that we have known for decades now, and with the aid of css we can reach high, print-like quality.</p>
+			<p>Paper is then designed to style the most frequently used html tags, especially those which are text based. Structure tags like divs or newer html5 ones like article, nav or aside are not taken into consideration; they are left to the user for styling, if necessary.</p>
+			<p>Furthermore, Paper is structured to use a minimal set of element classes, in order to keep the html as clean as possible.</p>
+			<p>Paper provides basic responsiveness to adapt content to several screen sizes.</p>
+			<h2>Notes</h2>
+			<p>Use the main menu (the handle is in the upper right corner) to navigate the site or change global settings.</p>
+			<p>Please notice that the main menu and the interactivity are not part of the framework, but have been developed specifically for this demo site.</p>
+			<p>If you are interested in using the framework, please head over to the <a href="https://github.com/cibboy/Paper/wiki">wiki</a> for details on its usage.</p>
 		</script>
 
 		<script type="text/html" id="headers">
@@ -263,6 +273,59 @@ console.log("Hello world.");
 			<p>Links are styled only through the traditional <kbd>a</kbd> tag, using the default underline style, coupled with a custom color and a slight color variation for hover.</p>
 			<h5>Example:</h5>
 			<p><a href="#">This is a link to the home page.</a></p>
+		</script>
+
+		<script type="text/html" id="pictures">
+			<h1>Paper - Pictures</h1>
+			<p>Pictures are shown with the traditional <kbd>img</kbd> tag, and no special styling is applied. There are, however, specification classes (and a special tag case) to handle variations, such as image inlining, centering, applying a shadow or a caption.</p>
+			<h5>Examples:</h5>
+			<h6>Traditional picture:</h6>
+			<img src="https://via.placeholder.com/350x150" />
+			<h6>Inline picture:</h6>
+			<p>This is some text, but images like this <img src="https://via.placeholder.com/50x30" class="inline" /> can be inlined.</p>
+			<h6>Shadowed picture:</h6>
+			<img src="https://via.placeholder.com/350x150" class="shadowed" />
+			<h6>Centered picture:</h6>
+			<img src="https://via.placeholder.com/350x150" class="centered" />
+			<h6>Captioned pictures:</h6>
+			<figure>
+				<img src="https://via.placeholder.com/350x150" class="captioned" />
+				<figcaption>Picture caption</figcaption>
+			</figure>
+			<figure class="centered">
+				<img src="https://via.placeholder.com/350x150" class="shadowed captioned" />
+				<figcaption>Centered picture caption</figcaption>
+			</figure>
+		</script>
+
+		<script type="text/html" id="otherelements">
+			<h1>Paper - Other Elements</h1>
+			<p>There are several other elements styled in Paper, although perhaps less frequent. Addresses and abbreviations have their own unique styles, the former a mix of a quote block and code block. Subscripts and superscripts are included as well through the <kbd>sub</kbd> and <kbd>sup</kbd> tags. Horizontal lines are nothing fancy, but they are styled. Html5 tag <kbd>mark</kbd> is in the mix to highlight text. Lastly, generic captions are available through specialization classes.</p>
+			<h5>Examples:</h5>
+			<h6>Address:</h6>
+			<address>
+				Name: John<br>
+				Surname: Doe<br>
+				Home address: Somewhere on Mars<br>
+				Website: <a href="https://example.com">example.com</a>
+			</address>
+			<h6>Abbreviations:</h6>
+			<p>We are all fans of <abbr title="Hypertext Markup Language">HTML</abbr>!</p>
+			<h6>Subscripts and superscripts:</h6>
+			<p>
+				x = log<sub>2</sub>(y)
+				<br>
+				y = z<sup>3</sup>
+			</p>
+			<h6>Horizontal lines:</h6>
+			<p>Some text</p>
+			<hr>
+			<p>Some other text</p>
+			<h6>Highlighting:</h6>
+			<p>Some text is important, but some other <mark>needs to be highlighted</mark>.</p>
+			<h6>Captions:</h6>
+			<p>This is a paragraph</p>
+			<span class="caption">And this is a caption</span>
 		</script>
 
 		<script type="text/javascript">

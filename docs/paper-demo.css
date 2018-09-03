@@ -26,10 +26,11 @@ nav.theme-dark {
 section {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 section>div {
-	flex: 50%;
+	flex: 33%;
 }
 
 #menu-toggle {
@@ -44,4 +45,21 @@ section>div {
 }
 #menu-toggle.active {
 	transform: rotate(-180deg);
+}
+
+/* -- Media queries -- */
+@media (max-width:700px) {
+	#menu-toggle {
+		padding: 0.5em 0.2em;
+	}
+}
+@media (max-width:900px) {
+	section>div {
+		flex: 100%;
+	}
+}
+@media (min-width:901px) and (max-width:1100px) {
+	section>div {
+		flex: 50%;
+	}
 }
