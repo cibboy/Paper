@@ -60,12 +60,16 @@ $shadow-color: rgba(255, 255, 255, 0.2);*/
 	font-family: 'EB Garamond', serif;
 	font-size: 1.45em;
 	color: $main-color;
-	background-color: $background-color;
+	background-color: transparent;
 	position: relative;
 	transition: all 0.2s ease-out;
 }
 * * {
 	font-size: 100%;
+}
+
+body {
+	background-color: $background-color;
 }
 
 .justify, .justify *,

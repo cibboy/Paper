@@ -3,6 +3,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="paper-light.css" id="base-css">
 		<link rel="stylesheet" type="text/css" href="paper-demo.css">
+		<!-- http://fontello.com -->
 		<link rel="stylesheet" type="text/css" href="fontello.css">
 	</head>
 	
@@ -34,15 +35,15 @@
 				</div>
 				<div class="center">
 					<h3>Components</h3>
-					<p><a href="#">Headers</a></p>
-					<p><a href="#">Paragraphs</a></p>
-					<p><a href="#">Lists</a></p>
-					<p><a href="#">Tables</a></p>
-					<p><a href="#">Quotes</a></p>
-					<p><a href="#">Code</a></p>
-					<p><a href="#">Links</a></p>
-					<p><a href="#">Pictures</a></p>
-					<p><a href="#">Other elements</a></p>
+					<p><a href="#/headers">Headers</a></p>
+					<p><a href="#/paragraphs">Paragraphs</a></p>
+					<p><a href="#/lists">Lists</a></p>
+					<p><a href="#/tables">Tables</a></p>
+					<p><a href="#/quotes">Quotes</a></p>
+					<p><a href="#/code">Code</a></p>
+					<p><a href="#/links">Links</a></p>
+					<p><a href="#/pictures">Pictures</a></p>
+					<p><a href="#/otherelements">Other elements</a></p>
 				</div>
 				<div class="center">
 					<h3>Pages</h3>
@@ -51,9 +52,69 @@
 			</section>
 		</nav>
 
-		<h1>Paper</h1>
-		<p>Welcome to Paper, a lightweight, typography-based, print-inspired, minimalistic design for websites.</p>
+		<!--<h1>Paper</h1>
+		<p>Welcome to Paper, a lightweight, typography-based, print-inspired, minimalistic design for websites.</p>-->
+
+		<div id="view">
+		</div>
 
 		<script type="text/javascript" src="paper-demo.js"></script>
+		<!-- https://gist.github.com/joakimbeng/7918297 -->
+		<script type="text/javascript" src="router.js"></script>
+		
+		<script type="text/html" id="home">
+			<h1>Paper</h1>
+			<p>Welcome to Paper, a lightweight, typography-based, print-inspired, minimalistic design for websites.</p>
+		</script>
+
+		<script type="text/html" id="headers">
+			<h1>Paper - Headers</h1>
+			<p>Traditional headers, <kbd>h1</kbd> through <kbd>h6</kbd>, are styled in Paper.</p>
+			<p><kbd>h1</kbd> has its own font, it's capitalized (not through CSS, the font itself is capitalized) and center-aligned. <kbd>h2</kbd> through <kbd>h6</kbd> are progressively smaller, with <kbd>h6</kbd> as large as normal text.</p>
+			<h5>Examples:</h5>
+			<p>
+				<h1>Header 1</h1>
+				<h2>Header 2</h2>
+				<h3>Header 3</h3>
+				<h4>Header 4</h4>
+				<h5>Header 5</h5>
+				<h6>Header 6</h6>
+			</p>
+		</script>
+
+		<script type="text/html" id="paragraphs">
+			<h1>Paper - Paragraphs</h1>
+			<p>Together with headers, paragraphs are the core of a web page styled with Paper. Like in printed books, paragraphs are spaced apart just enough to give the best legibility.</p>
+			<p>There is an alternate style for paragraph rendering, which comes through the use of specialization class <kbd>indent</kbd>, which prints paragraphs less spaced apart, with the first line slightly indented. This class must be used on all those paragraphs which require such style; unlike justification, indentation is not inherited.</p>
+			<p>Global justification can be adjusted as explained in the <a href="https://github.com/cibboy/Paper/wiki/Justification">wiki</a>. An example is available here through the main menu.</p>
+			<h5>Examples:</h5>
+			<h6>Standard paragraph:</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h6>Indented paragraph:</h6>
+			<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h6>Right-aligned paragraph:</h6>
+			<p class="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h6>Center-aligned paragraph:</h6>
+			<p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h6>Left-aligned paragraph:</h6>
+			<p class="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h6>Justified paragraph:</h6>
+			<p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</script>
+
+		<script type="text/javascript">
+			route('/', 'home', function () {
+				document.title = 'Paper - A lightweight, print-inspired design.';
+				toggleMenu(false);
+			});
+			route('/headers', 'headers', function () {
+				document.title = 'Paper - Headers.';
+				toggleMenu(false);
+			});
+			route('/paragraphs', 'paragraphs', function () {
+				document.title = 'Paper - Paragraphs.';
+				toggleMenu(false);
+			});
+		</script>
 	</body>
 </html>

@@ -1,6 +1,5 @@
  /* TODO: responsiveness */
 nav {
-	background-color: transparent;
 	position: fixed;
 	top: -100vh;
 	left: 0;
@@ -17,22 +16,20 @@ nav.active {
 	opacity: 1;
 	transition: all 0.5s ease-out;
 }
+nav, nav.theme-light {
+	background-color: #fefefe;
+}
+nav.theme-dark {
+	background-color: #252525;
+}
 
 section {
-	background-color: transparent;
 	display: flex;
 	flex-direction: row;
 }
 
 section>div {
 	flex: 50%;
-}
-
-div.color-scheme {
-	background-color: #252525;
-	border-radius: 50%;
-	width: 1.5em;
-	height: 1.5em;
 }
 
 #menu-toggle {

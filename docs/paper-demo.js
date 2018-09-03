@@ -1,6 +1,10 @@
 var menuOpen = false;
 
-function toggleMenu() {
+function toggleMenu(state) {
+	if (state !== undefined) {
+		menuOpen = !state;
+	}
+
 	if (menuOpen) {
 		document.getElementById('menu').classList.remove('active');
 		document.getElementById('menu-toggle').classList.remove('active');
@@ -14,10 +18,16 @@ function toggleMenu() {
 }
 
 function changeTheme(theme) {
-	if (theme == "light")
-		document.getElementById("base-css").setAttribute('href', 'paper-light.css');
-	else if (theme == "dark")
-		document.getElementById("base-css").setAttribute('href', 'paper-dark.css');
+	if (theme == "light") {
+		document.getElementById('base-css').setAttribute('href', 'paper-light.css');
+		document.getElementById('menu').classList.remove('theme-dark');
+		document.getElementById('menu').classList.add('theme-light');
+	}
+	else if (theme == "dark") {
+		document.getElementById('base-css').setAttribute('href', 'paper-dark.css');
+		document.getElementById('menu').classList.remove('theme-light');
+		document.getElementById('menu').classList.add('theme-dark');
+	}
 }
 
 function bodyLean(lean) {
