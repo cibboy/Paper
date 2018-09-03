@@ -52,9 +52,6 @@
 			</section>
 		</nav>
 
-		<!--<h1>Paper</h1>
-		<p>Welcome to Paper, a lightweight, typography-based, print-inspired, minimalistic design for websites.</p>-->
-
 		<div id="view">
 		</div>
 
@@ -102,17 +99,210 @@
 			<p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</script>
 
+		<script type="text/html" id="lists">
+			<h1>Paper - Lists</h1>
+			<p>Several types of list are styled in Paper. All major list tags are considered:</p>
+			<ul>
+				<li>Unordered lists (<kbd>ul</kbd>)</li>
+				<li>Ordered lists (<kbd>ol</kbd>)</li>
+				<li>Definition lists (<kbd>dl</kbd>)</li>
+			</ul>
+			<p>Unordered lists present a custom bullet point style, using the character &#x00bb;.</p>
+			<p>Ordered lists use the traditional decimal number order by default, but more styles are available through specialization classes. Such classes cover the roman and latin letters, both in upper and lower case.</p>
+			<p>Definition lists are rendered through a variation of the typical dictionary style.</p>
+			<p>Nested ordered and unordered lists are taken care of.</p>
+			<h5>Examples:</h5>
+			<h6>Unordered lists:</h6>
+			<ul>
+				<li>List element</li>
+				<li>List element</li>
+			</ul>
+			<h6>Ordered lists:</h6>
+			<ol>
+				<li>List element</li>
+				<li>List element</li>
+			</ol>
+			<h6>Definition lists:</h6>
+			<dl>
+				<dt>Term</dt>
+				<dd>Definition</dd>
+			</dl>
+			<h6>Ordered list variants:</h6>
+			<ol class="lower-roman">
+				<li>List element</li>
+				<li>List element</li>
+			</ol>
+			<ol class="upper-roman">
+				<li>List element</li>
+				<li>List element</li>
+			</ol>
+			<ol class="lower-latin">
+				<li>List element</li>
+				<li>List element</li>
+			</ol>
+			<ol class="upper-latin">
+				<li>List element</li>
+				<li>List element</li>
+			</ol>
+			<h6>Nested lists:</h6>
+			<ol class="upper-roman">
+				<li>List element</li>
+				<li>
+					Nested list
+					<ul>
+						<li>Nested list element</li>
+						<li>Nested list element</li>
+					</ul>
+				</li>
+				<li>List element</li>
+			</ol>
+		</script>
+
+		<script type="text/html" id="tables">
+			<h1>Paper - Tables</h1>
+			<p>Table style is handled automatically by Paper, using proper coloring for headers and footer, alternating colors for rows and adding a subtle border around cells.</p>
+			<p>Headers automatically bolden the text, leaving it left-aligned by default. If you prefer centered text, that is available through the use of the <kbd>center</kbd> specialization class.</p>
+			<p>Captions are handled as well. Unlike the default, unstyled table captions, in Paper they are moved below the table itself, to better resemble image captions.</p>
+			<h5>Examples:</h5>
+			<h6>Simple table:</h6>
+			<table>
+				<tbody>
+					<tr>
+						<td>Cell content</td>
+						<td>Cell content</td>
+						<td>Cell content</td>
+					</tr>
+					<tr>
+						<td>Cell content</td>
+						<td>Cell content</td>
+						<td>Cell content</td>
+					</tr>
+					<tr>
+						<td>Cell content</td>
+						<td>Cell content</td>
+						<td>Cell content</td>
+					</tr>
+				</tbody>
+			</table>
+			<h6>Complete table (centered) with all components:</h6>
+			<table class="centered">
+				<thead class="center">
+					<tr>
+						<th>Column 1</th>
+						<th>Column 2</th>
+						<th>Column 3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell content</td>
+						<td>Cell content</td>
+						<td>Cell content</td>
+					</tr>
+					<tr>
+						<td>Cell content</td>
+						<td>Cell content</td>
+						<td>Cell content</td>
+					</tr>
+					<tr>
+						<td>Cell content</td>
+						<td>Cell content</td>
+						<td>Cell content</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Sum</td>
+						<td>3</td>
+						<td></td>
+					</tr>
+				</tfoot>
+				<caption>Table caption</caption>
+			</table>
+		</script>
+
+		<script type="text/html" id="quotes">
+			<h1>Paper - Quotes</h1>
+			<p>Quotes come in two flavors:</p>
+			<ul>
+				<li><kbd>cite</kbd> tag</li>
+				<li><kbd>blockquote</kbd> tag</li>
+			</ul>
+			<p><kbd>cite</kbd> is for inline quotation and it simply receives an italic styling.</p>
+			<p><kbd>blockquote</kbd> is a dedicated block for longer quotations, styled in italic, with a slightly different color, a big quotation mark at the beginning to identify it and dedicate margins. It supports reference/author through a specialization class.</p>
+			<h5>Examples:</h5>
+			<h6>Inline quotes:</h6>
+			<p>This paragraphs shows an <cite>inline quote</cite>.</p>
+			<h6>Simple block quote:</h6>
+			<blockquote>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</blockquote>
+			<h6>Block quote with author:</h6>
+			<blockquote>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<span class="ref">Author</span>
+			</blockquote>
+		</script>
+
+		<script type="text/html" id="code">
+			<h1>Paper - Code</h1>
+			<p>Code blocks are rendered with a monospace font, dedicated margins and a lateral bar to better encase them. The lateral bar changes color on code hover.</p>
+			<p>Code blocks are available through the <kbd>code</kbd> and <kbd>sample</kbd> tags. Code highlighting is not included.</p>
+			<p>Special tag <kbd>kbd</kbd> is to be used for inline code, and it renders with the same font as code blocks.</p>
+			<h5>Examples:</h5>
+			<h6>Code blocks:</h6>
+			<code>
+console.log("Hello world.");
+			</code>
+			<h6>Inline code:</h6>
+			<p>This paragraph shows some <kbd>inline code</kbd>.</p>
+		</script>
+
+		<script type="text/html" id="links">
+			<h1>Paper - Links</h1>
+			<p>Links are styled only through the traditional <kbd>a</kbd> tag, using the default underline style, coupled with a custom color and a slight color variation for hover.</p>
+			<h5>Example:</h5>
+			<p><a href="#">This is a link to the home page.</a></p>
+
 		<script type="text/javascript">
 			route('/', 'home', function () {
-				document.title = 'Paper - A lightweight, print-inspired design.';
+				document.title = 'Paper - A lightweight, print-inspired design';
 				toggleMenu(false);
 			});
 			route('/headers', 'headers', function () {
-				document.title = 'Paper - Headers.';
+				document.title = 'Paper - Headers';
 				toggleMenu(false);
 			});
 			route('/paragraphs', 'paragraphs', function () {
-				document.title = 'Paper - Paragraphs.';
+				document.title = 'Paper - Paragraphs';
+				toggleMenu(false);
+			});
+			route('/lists', 'lists', function () {
+				document.title = 'Paper - Lists';
+				toggleMenu(false);
+			});
+			route('/tables', 'tables', function () {
+				document.title = 'Paper - Tables';
+				toggleMenu(false);
+			});
+			route('/quotes', 'quotes', function () {
+				document.title = 'Paper - Quotes';
+				toggleMenu(false);
+			});
+			route('/code', 'code', function () {
+				document.title = 'Paper - Code';
+				toggleMenu(false);
+			});
+			route('/links', 'links', function () {
+				document.title = 'Paper - Links';
+				toggleMenu(false);
+			});
+			route('/pictures', 'pictures', function () {
+				document.title = 'Paper - Pictures';
+				toggleMenu(false);
+			});
+			route('/otherelements', 'otherelements', function () {
+				document.title = 'Paper - Other Elements';
 				toggleMenu(false);
 			});
 		</script>

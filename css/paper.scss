@@ -185,6 +185,7 @@ blockquote cite {
 /* Code blocks */
 code, sample {
 	font-family: 'Cutive Mono', monospace;
+	letter-spacing: -0.05em;
 	text-align: left;
 	white-space: pre-wrap;
 	border-left: $block-color 0.3em solid;
@@ -197,6 +198,7 @@ code:hover, sample:hover {
 }
 kbd {
 	font-family: 'Cutive Mono', monospace;
+	letter-spacing: -0.05em;
 }
 
 /* Addresses */
